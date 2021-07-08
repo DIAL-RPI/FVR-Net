@@ -7,3 +7,9 @@ In this work, the proposed FVR-Net can be trained to automatically register a si
 
 ## Environment
 - Set up your environment by anaconda, (**python3.7, torch 1.5.0+cu92**)
+
+## Training
+The model of FVR-Net is defined in networks/fvrnet.py. The network composes of two parrallel branches: one for extracting features for 2D frame image and one for 3D volumetric image. After the concatenation of extracted feature vectors, a 6 degree-of-freedom prediction is regressed. The spatial transformer component is used to generate [affine grids](https://github.com/DIAL-RPI/FVR-Net/blob/7a983c5b01aa451ac84148f39b47a4c39c30520a/networks/fvrnet.py#L601) for transforming the volumetric image. This differentiable design enables training the network with image similarity loss in an end-to-end way. Run the following command to train with FVR-Net:
+```
+CUDA_VISIBLE_DEVICES=0 python train_network.py
+```
