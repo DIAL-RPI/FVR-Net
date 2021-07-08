@@ -3,7 +3,7 @@ This repository contains the source code for MICCAI-2021 paper, entitled "End-to
 ![FVR-Net Architecture](figures/FVR-Net.jpg)
 
 ## Introduction
-In this work, the proposed FVR-Net can be trained to automatically register a single transrectal ultrasound (TRUS) 2D frame to a reconstructed 3D TRUS volume, which potentially enables instant frame localization during the prostate biopsy. The proposed FVR-Net utilizes a dual-branch feature extraction module to extract the information from TRUS frame and volume to estimate transformation parameters. To achieve efficient training and inference, we introduce a differentiable 2D slice sampling module which allows gradients backpropagating from an unsupervised image similarity loss for content correspondence learning. We include the training codes for the current version, and the repository is under active update.
+In this work, the proposed FVR-Net can be trained to automatically register a single transrectal ultrasound (TRUS) 2D frame to a reconstructed 3D TRUS volume, which potentially enables instant frame localization during the prostate biopsy. The proposed FVR-Net utilizes a dual-branch feature extraction module to extract the information from TRUS frame and volume to estimate transformation parameters. To achieve efficient training and inference, we introduce a differentiable 2D slice sampling module which allows gradients backpropagating from an unsupervised image similarity loss for content correspondence learning. We include the training codes for the current version, and the repository is under active update. Please feel free to reach us if you have any questions or comments.
 
 ## Environment
 - Set up your environment by anaconda, (**python3.7, torch 1.5.0+cu92**)
@@ -13,3 +13,12 @@ The model of FVR-Net is defined in networks/fvrnet.py. The network composes of t
 ```
 CUDA_VISIBLE_DEVICES=0 python train_network.py
 ```
+
+## Testing
+TO DO
+
+## Trouble Shooting
+TO DO
+
+## Citation
+TO DO
